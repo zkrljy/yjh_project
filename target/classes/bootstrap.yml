@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled:
+          server: true
+          serviceId: common-config  #指定配置中心服务端的服务名称
+      name: frontend-search  #远程仓库中配置文件的前缀 （对应的{applicaiton}部分）
+      profile: dev  #远程仓库中配置文件的后缀 （对应的{profile}部分）
+      uri: http://127.0.0.1:9666  #配置中心的具体地址，Greenwich 版中需要添加
+      label: master
